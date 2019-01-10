@@ -156,7 +156,7 @@ class Discount extends Model implements DiscountContract
 
         if(str_contains($action->type,'percentage')){
             $type['type'] = 'percentage';
-            $type['value'] = json_decode($action->configuration, true)['percentage'] / 100;
+            $type['value'] = json_decode($action->configuration, true)['percentage'] / 10;
         }
 
         return $type;
